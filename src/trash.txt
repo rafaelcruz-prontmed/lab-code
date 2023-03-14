@@ -1,0 +1,9 @@
+const handleSubmit = (e: React.SyntheticEvent) => {
+    e.preventDefault();
+
+    const target = e.target as typeof e.target & { nome: { value: string }}
+    console.log(target.nome.value)
+
+    const value = (document.getElementById('nome') as HTMLInputElement).value
+    console.log(value);
+}
