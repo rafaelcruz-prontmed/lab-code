@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script defer src="./script.js"></script>
+
+    <style>
+      button {
+        background: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Página principal</h1>
+
+    <a href="../iframe1/index.html" target="my-iframe">Iframe 1</a>
+    <a href="../iframe2/index.html" target="my-iframe">Iframe 2</a>
+
+    aaa
+    <!-- allow-same-origin: habilita a importação -->
+    <!-- allow-modals: permite alert por exemplo -->
+    <!-- allow-scripts: permite que os scripts dentro sejam executados -->
+    <!-- allow-popups: permite que o iframe aba uma nova aba -->
+    <!-- sandbox="": bloqueia tudo -->
+    <!-- não definir o sandbox: libera tudo -->
+    <iframe
+      id="my-iframe"
+      name="my-iframe"
+      src="../iframe1/index.html"
+      sandbox="allow-scripts allow-same-origin"
+      height="350"
+      title="Você está acessando um iframe"
+    >
+      O seu navegador não suporta iframes
+    </iframe>
+    bbb
+
+    <br /><br />
+
+    <input id="input-message" placeholder="Mensagem para o iframe" />
+    <button id="btn-submit">Enviar</button>
+
+    <h2>Mensagem que chegou do iframe</h2>
+    <p id="message"></p>
+  </body>
+</html>
